@@ -18,4 +18,13 @@ export class Form1Component implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(form) {
+    console.log(form);
+
+    if (form.valid) {
+      // http post
+    }
+
+  }
+
 }

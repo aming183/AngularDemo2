@@ -8,7 +8,7 @@
       <p class="mb-lg">Standard Bootstrap form and input controls with customized UI variations</p>
       <div class="card">
         <div class="card-body">
-          <form #form="ngForm" class="form-horizontal">
+          <form #form="ngForm" class="form-horizontal" (ngSubmit)="onSubmit(form)">
             <fieldset>
               <div class="form-group" [class.has-error]="tTitle.dirty && tTitle.invalid">
                 <label class="col-sm-2 control-label">標題</label>
@@ -28,7 +28,7 @@
                   </pre>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset ngModelGroup="group1" #tGroup1="ngModelGroup" >
               <div class="form-group">
                 <label class="col-sm-2 control-label">副標題</label>
                 <div class="col-sm-10">
@@ -36,6 +36,9 @@
                 </div>
               </div>
             </fieldset>
+
+            <input type="submit" value="提交表單">
+
             <fieldset>
               <div class="form-group">
                 <label for="input-id-1" class="col-sm-2 control-label">Label focus</label>
