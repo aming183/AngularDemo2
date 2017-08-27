@@ -1,4 +1,7 @@
+import {$} from 'protractor/built';
 import { Component, OnInit } from '@angular/core';
+import { initSettings, sidebarNav } from './init';
+
 
 @Component({
   selector: 'app-layout',
@@ -10,6 +13,12 @@ export class LayoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    setTimeout(() => {
+      //$(initSettings);
+      //$(sidebarNav);
+    }, 0);
+
   }
 
 }

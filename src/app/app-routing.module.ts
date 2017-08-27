@@ -8,6 +8,8 @@ import { CardsComponent } from './cards/cards.component';
 import { LoginGuard } from './login.guard';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { Form1Component } from './form1/form1.component';
+import { Form2Component } from './form2/form2.component';
 
 const routes: Routes = [
   {
@@ -23,6 +25,8 @@ const routes: Routes = [
     ]
   },
   { path: 'login', component: LoginComponent },
+  { path: 'form1', component: Form1Component },
+  { path: 'form2', component: Form2Component },
   fallbackRoute
 ];
 
