@@ -31,7 +31,7 @@
                     <div class="col-sm-6 col-xs-12">
                       <div class="card">
                         <div class="card-heading bg-primary">
-                          <div class="card-title">Paracosm</div>
+                          <div class="card-title">Paracosm {{urlMatrixParamText}}</div>
                         </div>
                         <div class="card-offset">
                           <div class="card-offset-item text-right">
@@ -42,8 +42,10 @@
                           <p class="mb-sm">Cras rutrum scelerisque auctor. Donec ultricies blandit venenatis. Nulla facilisi. Praesent diam diam, venenatis lorem par.</p>
                         </div>
                         <div class="card-footer">
-                          <button type="button" class="btn btn-flat btn-default">Action 1</button>
-                          <button type="button" class="btn btn-flat btn-default">Action 2</button>
+                          <button [routerLink]="['/cards', 1, { name: 'Will Maxtrix'}]"
+                          type="button" class="btn btn-flat btn-default">Matrix URL</button>
+                          <button [routerLink]="['/cards', 1]" [queryParams]="{ name: 'Will Query'}"
+                          type="button" class="btn btn-flat btn-default">QueryString</button>
                         </div>
                       </div>
                     </div>

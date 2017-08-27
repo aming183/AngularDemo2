@@ -10,6 +10,9 @@ export class CardsComponent implements OnInit {
 
   type;
 
+  urlMatrixParamText;
+  urlQueryParamText;
+
   constructor(private router: Router
     , private route: ActivatedRoute) { }
 
@@ -21,6 +24,16 @@ export class CardsComponent implements OnInit {
 
     this.route.params.subscribe(params => {
       this.type = params['type'];
+      if (params['name']) {
+        this.urlMatrixParamText = params['name'];
+      }
+    });
+
+    this.route.queryParams.subscribe(params => {
+      this.type = params['type'];
+      if (params['name']) {
+        this.urlMatrixParamText = params['name'];
+      }
     });
 
 
